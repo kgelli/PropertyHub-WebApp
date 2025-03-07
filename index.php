@@ -74,7 +74,7 @@
             </div>
             <h3>EASY TRANSACTIONS</h3>
             <p>
-              Nebula Nest simplifies the home buying and selling process, making it a seamless and stress-free
+              Nebula Nest Realestate project simplifies the home buying and selling process, making it a seamless and stress-free
               experience for all users. Effortless transactions are just a click away.
             </p>
           </div>

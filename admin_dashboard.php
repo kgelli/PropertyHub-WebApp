@@ -5,14 +5,13 @@ require("db.php");
 session_start();
 
 $username = $_SESSION['username'];
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <title>NebulaNest: Admin dashboard</title>
+  <title>NebulaNest: Seller dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://kit.fontawesome.com/bdd89edb33.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
@@ -40,21 +39,23 @@ $username = $_SESSION['username'];
 <section id="home" class="parallax-section">
   <div class="gradient-overlay"></div>
   <div class="container">
-    <div class="row">.
+    <div class="row">
 
       <center>
         <div class="col-md-offset-2 col-md-8 col-sm-12">
-          <h1 class="wow fadeInUp" data-wow-delay="0.6s">Welcome, Admin!</h1>
+          <h1 class="wow fadeInUp" data-wow-delay="0.6s">Welcome, ADMIN!</h1>
           <a href="logout.php" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll"
             data-wow-delay="1.3s">LOGOUT</a>
           <a href="index.php" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll"
             data-wow-delay="1.3s">HOME</a>
-          <a href="deleteform.php" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll"
+          <a href="deleteformadmin.php" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll"
             data-wow-delay="1.3s">DELETE</a>
         </div>
-      </center>
 
     </div>
+    </center>
+
+  </div>
   </div>
 </section>
 <div class="full">
@@ -75,37 +76,36 @@ $username = $_SESSION['username'];
     foreach ($stmt as $row) {
       $image_path = 'img/' . $row['image'];
 
-      echo '<div class="col-1-of-3">';
-      echo '  <div class="card">';
-      echo '    <div class="card__side card__side--front-1" style="background-image: url(' . $image_path . ');">';
-      echo '      <div class="card__title card__title--1">';
-      echo '      </div>';
+      echo '  <div class="col-1-of-3">';
+      echo '    <div class="card">';
+      echo '      <div class="card__side card__side--front-1" style="background-image: url(' . $image_path . ');">';
+      echo '        <div class="card__title card__title--1">';
+      echo '        </div>';
 
-      echo '      <div class="card__details">';
+      echo '        <div class="card__details">';
+      echo '        </div>';
       echo '      </div>';
-      echo '    </div>';
-      echo '    <div class="card__side card__side--back card__side--back-1">';
-      echo '      <div class="card__cta">';
-      echo '        <div class="card__price-box">';
+      echo '      <div class="card__side card__side--back card__side--back-1">';
+      echo '        <div class="card__cta">';
+      echo '<div class="card__price-box">';
       echo '          <h3><b>Listing ID:</b> ' . $row['id'] . '</h3>';
       echo '          <h3><b>Owner:</b> ' . $row['seller_user_id'] . '</h3>';
-      echo '          <h3><b>Address:</b> ' . $row['address'] . '</h3>';
-      echo '          <h3><b>Age:</b> ' . $row['age'] . '</h3>';
-      echo '          <h3><b>No. of Beds:</b> ' . $row['bed'] . '</h3>';
-      echo '          <h3><b>No. of Baths:</b> ' . $row['ad'] . '</h3>';
-      echo '          <h3><b>Garden available:</b> ' . $row['garden'] . '</h3>';
-      echo '          <h3><b>Parking available:</b> ' . $row['pa'] . '</h3>';
-      echo '          <h3><b>Price:</b> ' . $row['tax'] . '</h3>';
+      echo '    <h3><b>Address:</b> ' . $row['address'] . '</h3>';
+      echo '    <h3><b>Age:</b> ' . $row['age'] . '</h3>';
+      echo '    <h3><b>No. of Beds:</b> ' . $row['bed'] . '</h3>';
+      echo '    <h3><b>No. of Baths:</b> ' . $row['ad'] . '</h3>';
+      echo '    <h3><b>Garden available:</b> ' . $row['garden'] . '</h3>';
+      echo '    <h3><b>Parking available:</b> ' . $row['pa'] . '</h3>';
+      echo '    <h3><b>Price:</b> ' . $row['tax'] . '</h3>';
+      echo '</div>';
       echo '        </div>';
       echo '      </div>';
       echo '    </div>';
       echo '  </div>';
-      echo '</div>';
     }
-
     echo '<div class="col-1-of-3">';
     echo '  <div class="card">';
-    echo '    <a href="form.php">';  // Add this line to create a link
+    echo '    <a href="adminform.php">';  // Add this line to create a link
     echo '      <div class="card__side card__side--front-1" style="background-image: url(\'img/plus.jpg\'); background-repeat: no-repeat; background-position: center;">';
     echo '        <div class="card__title card__title--1">';
     echo '        </div>';

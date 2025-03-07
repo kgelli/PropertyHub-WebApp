@@ -1,11 +1,8 @@
 <?php
 require("db.php");
-
 // need to seller to access dashboard
 session_start();
-
 $username = $_SESSION['username'];
-
 ?>
 
 <!DOCTYPE html>
